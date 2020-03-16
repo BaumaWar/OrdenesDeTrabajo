@@ -1,0 +1,2 @@
+create table vehiculo(pk_vehiculo bigint(50) primary key  auto_increment, fk_empresa bigint(50),placa varchar(20), numero_interno varchar(20));
+alter table vehiculo add foreign key(fk_empresa) references empresa(pk_empresa);

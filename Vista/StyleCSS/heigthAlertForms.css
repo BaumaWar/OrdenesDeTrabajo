@@ -1,0 +1,10 @@
+.altura60px{
+    position: relative;
+    top: 60px;
+}
+.alertDentroSCUno{
+    position: relative;
+    
+    width: 96%;
+    margin-left: 2%;
+}

@@ -1,0 +1,1 @@
+create table empresa(pk_empresa bigint(50) primary key auto_increment, descripcion_empresa varchar(50));
