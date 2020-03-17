@@ -73,7 +73,7 @@
                                 <input type="text" name="nombreCompleto" id="nombreCompletoVehiculoSCUno" class="custom-select-sm form-control input-group" />
                             </div>
                             <div class="col-sm " id="numeroCelularVehiculoSCUnoDIV">
-                                <span id="descripcionNumeroCelularVehiculo">Numero de celular*</span><br>
+                                <span id="descripcionNumeroCelularVehiculo">Numero de celular</span><br>
                                 <input type="text" name="numeroCelular" id="numeroCelularVehiculoSCUno" class="custom-select-sm form-control input-group" />
                             </div>
                             <div class="col-sm-3" id="versionSCUnoDIV">

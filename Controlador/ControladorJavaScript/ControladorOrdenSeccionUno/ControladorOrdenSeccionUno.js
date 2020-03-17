@@ -23,10 +23,20 @@ $(document).ready(function(){
         var nombreCompletoVehiculoPCRE= patt1.test(nombreCompletoVehiculo);
         var nombreCompletoPropietarioPCRE= patt2.test(nombreCompletoPropietario);
         var numeroCelularVehiculoPCRE= patt3.test(numeroCelularVehiculo);
-        var numeroCelularPropietarioPCRE= patt4.test(numeroCelularPropietario);
+        var numeroCelularPropietarioPCRE= patt4.test(numeroCelularPropietario);        
         /*End Expresiones irregulares*/
-        if((empresa!=="#")&&(placa!=="#")&&(nombreCompletoPropietario)&&(nombreCompletoVehiculo)&&(numeroCelularPropietario)&&(numeroCelularVehiculo)&&(version!=="#")&&(fecha!=="#")){
-            if((nombreCompletoPropietarioPCRE)&&(nombreCompletoVehiculoPCRE)&&(numeroCelularPropietarioPCRE)&&(numeroCelularVehiculoPCRE)){
+        
+        /*Start Comprobacion de que el  numero de celular llego para proceder a aplicarle las PCRE*/
+            var comprobacionNumeroCelularVehiculoQuienEntrega=null;
+            if(numeroCelularVehiculo){
+                comprobacionNumeroCelularVehiculoQuienEntrega= numeroCelularVehiculoPCRE;
+            }else{
+                comprobacionNumeroCelularVehiculoQuienEntrega= true;
+            }
+        /*End Comprobacion de que el  numero de celular llego para proceder a aplicarle las PCREgit*/
+        
+        if((empresa!=="#")&&(placa!=="#")&&(nombreCompletoPropietario)&&(nombreCompletoVehiculo)&&(numeroCelularPropietario)&&(version!=="#")&&(fecha!=="#")){
+            if((nombreCompletoPropietarioPCRE)&&(nombreCompletoVehiculoPCRE)&&(numeroCelularPropietarioPCRE)&&(comprobacionNumeroCelularVehiculoQuienEntrega)){
 
                 $.ajax({
                     url:urlDestino,
@@ -200,11 +210,11 @@ $(document).ready(function(){
             }else{
                 $('#descripcionPlaca').addClass('tomatoColor');
             }
-            if(numeroCelularVehiculo){
+            /*if(numeroCelularVehiculo){
                 $('#descripcionNumeroCelularVehiculo').removeClass('tomatoColor');
             }else{
                 $('#descripcionNumeroCelularVehiculo').addClass('tomatoColor');
-            }
+            }*/
             if(version!=="#"){
                 $('#descripcionVersion').removeClass('tomatoColor');
             }else{
