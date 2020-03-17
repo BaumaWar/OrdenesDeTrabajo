@@ -3,11 +3,12 @@ $(document).ready(function(){
         JQuery Toma los datos de la seccion dos y envia al controladorPHP OrdenSeccionDos
     */
     $(document).on("click","#saveSeccionDos",function(){
+        /*Se toman los datos de FormularioSeccionUno*/
         var horaDeEntrada= $('#horaDeEntradaSCDos').val();
         var horaDeSalida= $('#horaDeSalidaSCDos').val();
         var numeracion= $('#numeracionSCDos').val();
         var sello= $('#selloSCDos').val();
-        
+        /*End*/
         /* ID de la seccion uno registrada */
         var seccionUnoId= $('#SeccionUnoGuardo').val();
         /* End */
@@ -37,9 +38,10 @@ $(document).ready(function(){
         if($('#rayonesSCDos').is(':checked')){
             rayones= 1;
         }
-        
+        /* End */
+        /* Url Donde se insertan los datos */
         var urlDestino= "ajax.php?carpeta=ControladorPHP&modulo=OrdenSeccionDos&controlador=OrdenSeccionDos&funcion=crearPostInsert";
-        
+        /* End */
         if ((horaDeEntrada)&&(horaDeSalida)&&(numeracion)&&(sello)) {
             
             var patt1 = new RegExp(/^[\S][0-9\s]+$/g);
@@ -62,7 +64,8 @@ $(document).ready(function(){
                             $('#descripcionHoraDeSalida').removeClass('tomatoColor');
                             $('#descripcionNumeracion').removeClass('tomatoColor');
                             $('#descripcionSello').removeClass('tomatoColor');
-
+                            
+                            /*Start Alert temporizado*/
                             $('.alertSCDos').html('<div class="alert eliminarEn5s alert-success alert-dismissible fade show text-center font-size-14px" role="alert">\n\
                                                                 Registro Exitoso\n\
                                                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">\n\
@@ -71,7 +74,7 @@ $(document).ready(function(){
                                                                 </button>\n\
                                                             </div>');
                             setTimeout(function(){$('.eliminarEn5s').slideUp('slow', function(){$(this).remove();})},5000);
-
+                            /*End Alert temporizado*/
                         }
                     });
                     

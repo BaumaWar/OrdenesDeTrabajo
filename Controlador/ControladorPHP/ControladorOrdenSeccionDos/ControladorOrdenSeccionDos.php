@@ -8,6 +8,7 @@ class ControladorOrdenSeccionDos extends ModelOrdenSeccionDos{
     public function __construct() {
         $this->ObjModel= new ModelOrdenSeccionDos();                
     }
+    
     public function crear(){
         require_once '../Vista/FormularioOrdenesDePedidoSeccionDos/crearOrden.html.php';
     }

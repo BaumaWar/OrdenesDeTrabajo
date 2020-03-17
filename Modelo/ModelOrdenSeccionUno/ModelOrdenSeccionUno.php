@@ -59,6 +59,8 @@ class ModelOrdenSeccionUno extends MasterModel{
                                             );
             
             $sqlInsert=null;
+            $conexion=null;
+            $ultimoID=null;
             
             echo json_encode($ultimoIDArrayAsociativo);
             

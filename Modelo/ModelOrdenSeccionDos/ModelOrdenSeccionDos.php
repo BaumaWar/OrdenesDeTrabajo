@@ -45,6 +45,17 @@ class ModelOrdenSeccionDos extends MasterModel{
             $sqlInsert->bindParam(':golpes', $golpes);
             $sqlInsert->bindParam(':rayones', $rayones);
             $sqlInsert->execute();
+            
+            $ultimoID= $conexion->lastInsertId();
+            
+            $ultimoIDArrayAsociativo= array('ultimoID'=>$ultimoID, 'horaDeEntrada'=>$horaDeEntrada, 'HoraDeSalida'=>$horaDeSalida, 'numeracion'=>$numeracion, 'sello'=>$sello);
+            
+            $conexion=null;
+            $sqlInsert=null;
+            $ultimoID=null;
+            
+            echo json_encode($ultimoIDArrayAsociativo);
+            
         } catch (PDOException $exc) {
             echo $exc->getMessage();
         }

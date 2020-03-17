@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    /*Start Controlador Visual Seccion Uno*/
     $(document).on("click",".OrdenDeTrabajoUno",function(){
         var seccion= $(this).attr('data-seccion');
         
@@ -8,7 +9,9 @@ $(document).ready(function(){
         }
         
     });
-    
+    /*End Controlador Visual Seccion Uno*/
+    /*-----------------------------------*/
+    /*Start Controlador Visual Seccion Dos*/
     $(document).on("click",".OrdenDeTrabajoDos",function(){
         var seccion= $(this).attr('data-seccion');
         
@@ -16,9 +19,9 @@ $(document).ready(function(){
             $('#SeccionUnoOcultar').removeClass('ocultarDisplayNone');
             $('#SeccionDosOcultar').addClass('ocultarDisplayNone');
         }
-        
-    });
     
+    });
+    /*End Controlador Visual Seccion Dos*/
 });
 
 
