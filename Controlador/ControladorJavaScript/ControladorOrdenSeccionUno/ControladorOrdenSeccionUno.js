@@ -32,8 +32,9 @@ $(document).ready(function(){
                 comprobacionNumeroCelularVehiculoQuienEntrega= numeroCelularVehiculoPCRE;
             }else{
                 comprobacionNumeroCelularVehiculoQuienEntrega= true;
+                numeroCelularVehiculo=""
             }
-        /*End Comprobacion de que el  numero de celular llego para proceder a aplicarle las PCREgit*/
+        /*End Comprobacion de que el  numero de celular llego para proceder a aplicarle las PCRE*/
         
         if((empresa!=="#")&&(placa!=="#")&&(nombreCompletoPropietario)&&(nombreCompletoVehiculo)&&(numeroCelularPropietario)&&(version!=="#")&&(fecha!=="#")){
             if((nombreCompletoPropietarioPCRE)&&(nombreCompletoVehiculoPCRE)&&(numeroCelularPropietarioPCRE)&&(comprobacionNumeroCelularVehiculoQuienEntrega)){
